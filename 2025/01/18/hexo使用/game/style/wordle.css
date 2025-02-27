@@ -1,0 +1,219 @@
+/* style/wordle.css */
+
+/* 使用 :root 伪类定义全局的 CSS 变量，这些变量可以在整个样式表中复用，方便统一修改颜色等样式值 */
+:root {
+    --green: #6aaa64; /* 定义绿色的颜色值，用于表示如正确猜测的颜色 */
+    --yellow: #c9b458; /* 定义黄色的颜色值，用于表示部分正确猜测的颜色 */
+    --gray: #787c7e; /* 定义灰色的颜色值，用于表示错误猜测的颜色 */
+    --light-gray: #d3d6da; /* 定义浅灰色的颜色值，常用于边框等浅色部分 */
+    --dark-text: #1a1a1b; /* 定义深色文本的颜色值，用于文本显示 */
+}
+
+/* 通用选择器，选中所有元素，设置盒模型为 border-box，重置外边距和内边距，使元素的尺寸计算更符合预期 */
+* {
+    box-sizing: border-box; /* 设置盒模型，使元素的宽度和高度包括内边距和边框，避免布局时出现意外的尺寸变化 */
+    margin: 0; /* 重置外边距为 0，消除默认的外边距 */
+    padding: 0; /* 重置内边距为 0，消除默认的内边距 */
+}
+
+/* 设置 h1 元素的字体大小，这里设置为 42px，使标题更醒目 */
+h1 {
+    font-size: 42px;
+}
+
+/* 设置 body 元素的样式，包括字体、背景颜色、布局方式等，奠定页面整体的样式基础 */
+body {
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif; /* 设置字体家族，确保页面文本的显示效果 */
+    background-color: white; /* 设置背景颜色为白色，使页面背景干净简洁 */
+    display: flex; /* 使用 Flexbox 布局，方便对子元素进行排列和对齐 */
+    flex-direction: column; /* 设置子元素垂直排列，符合页面从上到下的布局逻辑 */
+    align-items: center; /* 使子元素在水平方向上居中，使页面内容在水平方向上看起来更整齐 */
+    user-select: none; /* 禁止用户选中页面内容，避免不必要的文本选择操作 */
+    min-height: 100vh; /* 设置最小高度为视口高度的 100%，确保页面内容能填满整个视口高度 */
+}
+
+/* 设置容器类的样式，限制宽度并添加内边距，控制页面主要内容的显示范围和内边距 */
+.container {
+    width: 100%; /* 设置宽度为父容器的 100%，使其充满父容器的宽度 */
+    max-width: 500px; /* 设置最大宽度为 500px，限制页面内容的最大宽度，避免在宽屏上过于分散 */
+    padding: 10px; /* 添加 10px 的内边距，使内容与容器边缘有一定的距离 */
+}
+
+/* 设置 header 元素的样式，包括边框、内边距、外边距和文本对齐方式，定义页面头部的样式 */
+header {
+    border-bottom: 1px solid var(--light-gray); /* 添加底部边框，颜色为浅灰色，用于区分头部和其他部分 */
+    padding: 10px 0; /* 上下内边距为 10px，左右内边距为 0，调整头部内容的垂直内边距 */
+    margin-bottom: 20px; /* 底部外边距为 20px，使头部与下方内容有一定的间隔 */
+    text-align: center; /* 文本内容居中对齐，使标题等内容在头部水平居中 */
+}
+
+/* 设置 id 为 alert 的元素的样式，包括高度、上边距、字体粗细和颜色，用于显示提示信息 */
+#alert {
+    height: 30px; /* 设置高度为 30px，确定提示信息区域的高度 */
+    margin-top: 5px; /* 上边距减小为 5px，元素会上移，调整提示信息与上方内容的距离 */
+    font-weight: bold; /* 设置字体粗细为粗体，使提示信息更醒目 */
+    font-size: x-large;
+    color: var(--gray); /* 设置文本颜色为灰色，与整体风格协调 */
+}
+
+/* 设置 id 为 board 的元素（棋盘）的样式，使用 Grid 布局，定义棋盘的样式和布局 */
+.board {
+    display: grid; /* 使用 Grid 布局，方便创建棋盘的行列结构 */
+    grid-template-rows: repeat(6, 1fr); /* 定义 6 行，每行高度相等，形成棋盘的行结构 */
+    gap: 5px; /* 设置行与行之间的间距为 5px，使棋盘格子之间有一定间隔 */
+    margin: 20px 0; /* 上下外边距为 20px，调整棋盘与上下内容的距离 */
+    max-width: 100%; /* 限制棋盘的最大宽度为父容器的 100%，即不超过窗口宽度，确保棋盘适应不同设备 */
+    width: 400px; /* 设置棋盘的宽度为 400px，可根据需要调整棋盘的宽度 */
+    margin: 20px auto; /* 水平居中棋盘，上下外边距为 20px，使棋盘在页面中水平居中显示 */
+}
+
+/* 设置类名为 row 的元素（棋盘的行）的样式，使用 Grid 布局，定义棋盘行的样式和布局 */
+.row {
+    display: grid; /* 使用 Grid 布局，方便创建每行的列结构 */
+    grid-template-columns: repeat(5, 1fr); /* 定义 5 列，每列宽度相等，形成每行的列结构 */
+    gap: 5px; /* 设置列与列之间的间距为 5px，使棋盘格子之间有一定间隔 */
+}
+
+/* 设置类名为 tile 的元素（棋盘格子）的样式，定义每个棋盘格子的外观 */
+.tile {
+    aspect-ratio: 1; /* 设置宽高比为 1，使格子为正方形 */
+    background-color: white; /* 背景颜色为白色，初始状态的格子背景色 */
+    border: 2px solid var(--light-gray); /* 边框为 2px 宽的浅灰色，定义格子的边框样式 */
+    display: flex; /* 使用 Flexbox 布局，方便内部内容居中 */
+    justify-content: center; /* 内容在水平方向上居中，使格子内的文本水平居中 */
+    align-items: center; /* 内容在垂直方向上居中，使格子内的文本垂直居中 */
+    font-size: 1.8rem; /* 设置字体大小为 1.8rem，确定格子内文本的大小 */
+    font-weight: bold; /* 设置字体粗细为粗体，使格子内的文本更醒目 */
+    text-transform: uppercase; /* 文本转换为大写，统一格子内文本的显示风格 */
+    transition: background-color 1s; /* 设置背景颜色变化的过渡效果，持续时间为 1s，使颜色变化更平滑 */
+}
+
+/* 当 tile 元素具有 data-state="active" 属性时，更改其边框颜色，用于表示当前活动的格子 */
+.tile[data-state="active"] {
+    border-color: var(--dark-text); /* 边框颜色为深色文本的颜色，突出当前活动的格子 */
+}
+
+/* 设置类名为 green 的 tile 元素的样式（绿色格子），表示正确猜测的格子样式 */
+.tile.green {
+    background-color: var(--green); /* 背景颜色为绿色，与全局定义的绿色颜色值一致 */
+    border-color: var(--green); /* 边框颜色为绿色，使格子整体为绿色 */
+    color: white; /* 文本颜色为白色，使文本在绿色背景上清晰可见 */
+}
+
+/* 设置类名为 yellow 的 tile 元素的样式（黄色格子），表示部分正确猜测的格子样式 */
+.tile.yellow {
+    background-color: var(--yellow); /* 背景颜色为黄色，与全局定义的黄色颜色值一致 */
+    border-color: var(--yellow); /* 边框颜色为黄色，使格子整体为黄色 */
+    color: white; /* 文本颜色为白色，使文本在黄色背景上清晰可见 */
+}
+
+/* 设置类名为 gray 的 tile 元素的样式（灰色格子），表示错误猜测的格子样式 */
+.tile.gray {
+    background-color: var(--gray); /* 背景颜色为灰色，与全局定义的灰色颜色值一致 */
+    border-color: var(--gray); /* 边框颜色为灰色，使格子整体为灰色 */
+    color: white; /* 文本颜色为白色，使文本在灰色背景上清晰可见 */
+}
+
+/* 定义名为 shake 的动画关键帧，用于实现摇晃效果，可能用于提示错误等情况 */
+@keyframes shake {
+    10%, 90% { transform: translateX(-1px); } /* 在动画的 10% 和 90% 处，水平向左移动 1px，实现摇晃的一部分效果 */
+    20%, 80% { transform: translateX(2px); } /* 在动画的 20% 和 80% 处，水平向右移动 2px，实现摇晃的一部分效果 */
+    30%, 50%, 70% { transform: translateX(-4px); } /* 在动画的 30%、50% 和 70% 处，水平向左移动 4px，实现摇晃的一部分效果 */
+    40%, 60% { transform: translateX(4px); } /* 在动画的 40% 和 60% 处，水平向右移动 4px，实现摇晃的一部分效果 */
+}
+
+/* 设置类名为 shake 的元素应用 shake 动画，使元素具有摇晃效果 */
+.shake {
+    animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both; /* 应用 shake 动画，持续时间为 0.6s，使用指定的贝塞尔曲线，动画开始和结束时都应用样式 */
+}
+
+/* 设置类名为 keyboard 的元素（虚拟键盘）的样式，添加外边距，调整虚拟键盘与上下内容的距离 */
+.keyboard {
+    margin: 20px 0; /* 上下外边距为 20px，使虚拟键盘与上方和下方的内容有一定间隔 */
+}
+
+/* 设置类名为 row 的元素（键盘的行）的样式，使用 Flexbox 布局，定义虚拟键盘行的样式和布局 */
+.keyboard .row {
+    display: flex; /* 使用 Flexbox 布局，方便对键盘按钮进行排列 */
+    justify-content: center; /* 内容在水平方向上居中，使键盘按钮在每行中水平居中 */
+    gap: 5px; /* 元素之间的间距为 5px，使按钮之间有一定间隔 */
+    margin: 5px 0; /* 上下外边距为 5px，调整每行与上下行的距离 */
+}
+
+/* 设置类名为 keyboard button 的元素（键盘按钮）的样式，定义虚拟键盘按钮的外观 */
+.keyboard button {
+    min-width: 40px; /* 设置最小宽度为 40px，确定按钮的最小宽度 */
+    height: 58px; /* 设置高度为 58px，确定按钮的高度 */
+    border: none; /* 无边框，使按钮外观简洁 */
+    border-radius: 4px; /* 边框圆角为 4px，使按钮边角更圆润 */
+    background-color: var(--light-gray); /* 背景颜色为浅灰色，按钮的初始背景色 */
+    font-weight: bold; /* 字体粗细为粗体，使按钮上的文本更醒目 */
+    text-transform: uppercase; /* 文本转换为大写，统一按钮文本的显示风格 */
+    cursor: pointer; /* 鼠标指针样式为指针，提示用户按钮可点击 */
+    transition: background-color 1s; /* 设置背景颜色变化的过渡效果，持续时间为 0.2s，使颜色变化更平滑 */
+}
+
+/* 设置类名为 wide 的 keyboard button 元素（宽按钮）的样式，增加最小宽度，用于特殊功能按钮如回车键和退格键 */
+.keyboard button.wide {
+    min-width: 65px; /* 设置最小宽度为 65px，使宽按钮比普通按钮更宽 */
+}
+
+/* 设置具有 data-state="green" 属性的 keyboard button 元素的样式（绿色按钮），表示按钮处于绿色状态的样式 */
+.keyboard button[data-state="green"] {
+    background-color: var(--green); /* 背景颜色为绿色，与全局定义的绿色颜色值一致 */
+    color: white; /* 文本颜色为白色，使文本在绿色背景上清晰可见 */
+}
+
+/* 设置具有 data-state="yellow" 属性的 keyboard button 元素的样式（黄色按钮），表示按钮处于黄色状态的样式 */
+.keyboard button[data-state="yellow"] {
+    background-color: var(--yellow); /* 背景颜色为黄色，与全局定义的黄色颜色值一致 */
+    color: white; /* 文本颜色为白色，使文本在黄色背景上清晰可见 */
+}
+
+/* 设置具有 data-state="gray" 属性的 keyboard button 元素的样式（灰色按钮），表示按钮处于灰色状态的样式 */
+.keyboard button[data-state="gray"] {
+    background-color: var(--gray); /* 背景颜色为灰色，与全局定义的灰色颜色值一致 */
+    color: white; /* 文本颜色为白色，使文本在灰色背景上清晰可见 */
+}
+
+/* 设置 id 为 restart-button 的元素（重启按钮）的样式，定义重启按钮的外观和位置 */
+#restart-button {
+    font-size: larger; /* 设置字体大小为 larger，使按钮文本稍大 */
+    display: block; /* 显示为块级元素，方便设置宽度和边距 */
+    margin: 30px auto -20px; /* 增加上边距为 30px，确保与 #alert 不重合，水平居中，底部外边距为 -20px 用于微调位置 */
+    width: fit-content; /* 宽度自适应内容，使按钮宽度刚好容纳文本 */
+    padding: 18px 26px; /* 内边距为 18px 和 26px，调整按钮内文本的空间 */
+    border: none; /* 无边框，使按钮外观简洁 */
+    border-radius: 40px; /* 边框圆角为 40px，使按钮边角更圆润 */
+    background-color: var(--green); /* 背景颜色为绿色，按钮的初始背景色 */
+    color: white; /* 文本颜色为白色，使文本在绿色背景上清晰可见 */
+    font-weight: bold; /* 字体粗细为粗体，使按钮文本更醒目 */
+    cursor: pointer; /* 鼠标指针样式为指针，提示用户按钮可点击 */
+    transition: background-color 0.2s; /* 设置背景颜色变化的过渡效果，持续时间为 0.2s，使颜色变化更平滑 */
+    position: relative; /* 设置为相对定位，方便微调按钮位置 */
+    top: -20px; /* 相对于原来位置上移 20px，微调按钮位置 */
+}
+
+/* 当鼠标悬停在重启按钮上时，更改其背景颜色，增加交互反馈 */
+#restart-button:hover {
+    background-color: #558850; /* 背景颜色变为深绿色，提示用户按钮被悬停 */
+}
+
+/* 以下是新增的 id 为 dynamic-content 的元素的样式，用于动态插入内容的区域 */
+#dynamic-content {
+    text-align: center; /* 文本和图片居中，使插入的内容在该区域水平居中 */
+    margin: 10px 0; /* 上下边距为 10px，调整该区域与上下内容的距离 */
+    font-size: larger; /* 设置字体大小为 larger，使该区域内文本稍大 */
+    font-weight: bold; /* 设置字体粗细为粗体，使该区域内文本更醒目 */
+}
+
+/* 设置 id 为 dynamic-content 的元素内的 p 元素的样式，用于调整段落样式 */
+#dynamic-content p {
+    margin-bottom: 10px; /* 文本和图片之间的间距为 10px，使段落与图片之间有一定间隔 */
+}
+
+/* 设置 id 为 dynamic-content 的元素内的 img 元素的样式，用于调整插入图片的样式 */
+#dynamic-content img {
+    max-width: 100%; /* 图片最大宽度不超过容器，确保图片不会超出该区域的宽度 */
+    height: auto; /* 高度自适应，保持图片的宽高比 */
+}
