@@ -464,11 +464,11 @@ function gameOver() {
         showAlert('Congratulations!'); // 显示获胜提示信息
 
         if (currentGuessTime === 0) {
-            insertDynamicContent("一命通关???开了???", "/img/first.gif"); // 显示一命通关的动态内容
+            insertDynamicContent("一命通关???开了???", "img/first.gif"); // 显示一命通关的动态内容
         } else if (currentGuessTime === 5) {
-            insertDynamicContent("极限!!!开香槟咯!!!", "/img/nb.png"); // 显示极限通关的动态内容
+            insertDynamicContent("极限!!!开香槟咯!!!", "img/nb.png"); // 显示极限通关的动态内容
         } else {
-            insertDynamicContent("哦哦哦耶耶耶,赢!!!", "/img/win.gif"); // 显示普通获胜的动态内容
+            insertDynamicContent("哦哦哦耶耶耶,赢!!!", "img/win.gif"); // 显示普通获胜的动态内容
         }
     } else {
         showAlert(`Answer: ${answer}`); // 显示正确答案
@@ -478,13 +478,13 @@ function gameOver() {
         let greenCount = colorsCount.green;
 
         if (yellowCount === 0 && greenCount === 0) {
-            insertDynamicContent("一个都猜不到吗???", "/img/0.jpg"); // 显示未猜对任何字母的动态内容
+            insertDynamicContent("一个都猜不到吗???", "img/0.jpg"); // 显示未猜对任何字母的动态内容
         } else if (yellowCount === 5 && greenCount === 0) {
-            insertDynamicContent("排列组合の痛", "/img/A55.jpg"); // 显示全是黄色的动态内容
+            insertDynamicContent("排列组合の痛", "img/A55.jpg"); // 显示全是黄色的动态内容
         } else if (greenCount >= 4) {
-            insertDynamicContent("一步之遥!!!", "/img/justoneqwq.gif"); // 显示接近猜对的动态内容
+            insertDynamicContent("一步之遥!!!", "img/justoneqwq.gif"); // 显示接近猜对的动态内容
         } else {
-            insertDynamicContent("GG", "/img/GG.gif"); // 显示失败的动态内容
+            insertDynamicContent("GG", "img/GG.gif"); // 显示失败的动态内容
         }
     }
 }
