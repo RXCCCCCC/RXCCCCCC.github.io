@@ -81,7 +81,7 @@ start();
 function start() {
     document.addEventListener('DOMContentLoaded', () => {
         // 使用 fetch API 从指定路径加载单词列表 JSON 文件
-        fetch('/static/words.json')
+        fetch('static/words.json')
           .then(response => {
                 // 检查响应是否成功
                 if (!response.ok) {
