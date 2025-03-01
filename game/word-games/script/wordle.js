@@ -96,6 +96,25 @@ function start() {
                 wordList = data.words;
                 // 隐藏加载提示信息
                 showAlert('');
+                document.addEventListener('keydown', (event) =>{
+                    if (state!== 'UNFINISHED') return; // 如果游戏已结束，不处理键盘事件
+                    const key = event.key.toLowerCase(); // 获取按下的键，转换为小写
+                    if (key === 'enter') submitGuess(); // 按下回车键，提交猜测
+                    else if (key === 'backspace') deleteLastChar(); // 按下退格键，删除最后一个字符
+                    else if (/^[a-z]$/.test(key)) addChar(key); // 按下字母键，添加字符
+                });
+                // 为键盘按钮绑定点击事件
+                document.querySelectorAll('.keyboard button').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const key = button.dataset.key.toLowerCase();
+                        if (key === 'enter') submitGuess(); // 点击回车键，提交猜测
+                        else if (key === 'backspace') deleteLastChar(); // 点击退格键，删除最后一个字符
+                        else addChar(key); // 点击字母键，添加字符
+                    });
+                });
+            
+                // 为重启按钮绑定点击事件
+                document.getElementById('restart-button').addEventListener('click', initialize);
                 initialize();
             })
           .catch(error => {
@@ -196,25 +215,6 @@ function initialize() {
     wordSequence = [];
     colorSequence = [];
     guess = '';
-    document.addEventListener('keydown', (event) =>{
-        if (state!== 'UNFINISHED') return; // 如果游戏已结束，不处理键盘事件
-        const key = event.key.toLowerCase(); // 获取按下的键，转换为小写
-        if (key === 'enter') submitGuess(); // 按下回车键，提交猜测
-        else if (key === 'backspace') deleteLastChar(); // 按下退格键，删除最后一个字符
-        else if (/^[a-z]$/.test(key)) addChar(key); // 按下字母键，添加字符
-    });
-    // 为键盘按钮绑定点击事件
-    document.querySelectorAll('.keyboard button').forEach(button => {
-        button.addEventListener('click', () => {
-            const key = button.dataset.key.toLowerCase();
-            if (key === 'enter') submitGuess(); // 点击回车键，提交猜测
-            else if (key === 'backspace') deleteLastChar(); // 点击退格键，删除最后一个字符
-            else addChar(key); // 点击字母键，添加字符
-        });
-    });
-
-    // 为重启按钮绑定点击事件
-    document.getElementById('restart-button').addEventListener('click', initialize);
 
     // 初始化键盘状态对象，将所有字母的状态设为 null
     for (let i = 97; i <= 122; i++) {
@@ -479,9 +479,8 @@ function gameOver() {
 
         if (yellowCount === 0 && greenCount === 0) {
             insertDynamicContent("一个都猜不到吗???", "img/0.jpg"); // 显示未猜对任何字母的动态内容
-        } else if (yellowCount === 5 && greenCount === 0) {
-            insertDynamicContent("排列组合の痛", "img/A55.jpg"); // 显示全是黄色的动态内容
-        } else if (greenCount >= 4) {
+        } 
+          else if (greenCount >= 4) {
             insertDynamicContent("一步之遥!!!", "img/justoneqwq.gif"); // 显示接近猜对的动态内容
         } else {
             insertDynamicContent("GG", "img/GG.gif"); // 显示失败的动态内容
