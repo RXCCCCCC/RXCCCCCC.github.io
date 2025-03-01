@@ -42,8 +42,11 @@ let answer = "";
 let guess = "";
 // 当前已经使用的猜测次数
 let currentGuessTime = 0;
-let keyboardState = {}; // 存储键盘上每个字母的状态
-let wordList = []; // 存储从 JSON 文件中加载的单词列表
+// 存储虚拟键盘上每个字母的状态
+let keyboardState = {}; 
+// 存储从 JSON 文件中加载的单词列表
+let wordList = []; 
+
 /**
  * 程序当前的状态，更推荐使用枚举
  *
@@ -141,32 +144,28 @@ function start() {
  * 3. 应该在怎样的时刻调用 render 函数
  */
 function render() {
-    const board = document.getElementById('board'); // 获取棋盘元素
+    const board = document.getElementById('board'); // 定位棋盘元素
     const currentRow = board.children[currentGuessTime]; // 获取当前猜测行的元素
 
     if (currentRow) {
         const tiles = currentRow.querySelectorAll('.tile'); // 获取当前行的所有格子元素
 
         for (let j = 0; j < answerLength; j++) {
-            const tile = tiles[j]; // 获取当前格子元素
+            const tile = tiles[j]; // 定位当前第j+1个格子元素
 
             if (wordSequence[currentGuessTime]) {
-                // 如果当前猜测行已有猜测单词，更新格子的文本内容
+                // 如果当前猜测行已有猜测单词，更新格子的颜色
                 tile.textContent = wordSequence[currentGuessTime][j];
-                // 移除格子的颜色类名
-                tile.classList.remove('green', 'yellow', 'gray');
                 // 根据颜色序列添加相应的颜色类名
                 tile.classList.add(
                     colorSequence[currentGuessTime][j] === green ? 'green' :
                     colorSequence[currentGuessTime][j] === yellow ? 'yellow' : 'gray'
                 );
-            } else if (currentGuessTime === currentGuessTime) {
+            } else  {
                 // 如果当前猜测行还没有猜测单词，更新格子的文本内容
                 tile.textContent = guess[j] || '';
-                // 设置格子的状态属性
+                // 设置格子的状态属性,以显示边框
                 tile.dataset.state = guess[j] ? 'active' : '';
-                // 移除格子的颜色类名
-                tile.classList.remove('green', 'yellow', 'gray');
             }
         }
     }
@@ -184,6 +183,7 @@ function render() {
  */
 function initialize() {
     answer = generateRandomAnswer();
+    document.getElementById('restart-button').style.display = 'none'; // 隐藏重启按钮
     const dynamicContent = document.getElementById('dynamic-content');
     // 清空动态内容区域的之前内容
     dynamicContent.innerHTML = '';
@@ -222,7 +222,6 @@ function initialize() {
     }
 
     render(); // 渲染游戏界面
-    document.getElementById('restart-button').style.display = 'none'; // 隐藏重启按钮
 }
 
 
@@ -289,7 +288,7 @@ function isValidWord(word) {
 function handleAnswer() {
     guess = guess.toLowerCase(); // 将猜测单词转换为小写
     const board = document.getElementById('board');
-    currentRow = board.children[currentGuessTime];
+    currentRow = board.children[currentGuessTime];//要先获取当前行
     if(!isValidWord(guess))
         {
             return;
@@ -327,7 +326,7 @@ function handleAnswer() {
 
     // 如果游戏结束，显示重启按钮
     if (state!== 'UNFINISHED') {
-        document.getElementById('restart-button').style.display = 'block';//TODO
+        document.getElementById('restart-button').style.display = 'block';
     }
     return;
 }
@@ -473,7 +472,7 @@ function gameOver() {
     } else {
         showAlert(`Answer: ${answer}`); // 显示正确答案
 
-        let colorsCount = countboardColors(); // 统计棋盘上绿色和黄色的数量
+        let colorsCount = countboardColors(); 
         let yellowCount = colorsCount.yellow;
         let greenCount = colorsCount.green;
 
