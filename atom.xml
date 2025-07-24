@@ -6,7 +6,7 @@
   <link href="http://rxcccccc.github.io/atom.xml" rel="self"/>
   
   <link href="http://rxcccccc.github.io/"/>
-  <updated>2025-07-24T11:06:35.216Z</updated>
+  <updated>2025-07-24T16:36:49.228Z</updated>
   <id>http://rxcccccc.github.io/</id>
   
   <author>
@@ -17,18 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>test</title>
+    <link href="http://rxcccccc.github.io/2025/07/25/text/"/>
+    <id>http://rxcccccc.github.io/2025/07/25/text/</id>
+    <published>2025-07-24T16:36:04.000Z</published>
+    <updated>2025-07-24T16:36:49.228Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/./text/aea66f21377933392f6a44164e9dd858.jpg&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>进行vue的一个一个学</title>
     <link href="http://rxcccccc.github.io/2025/07/24/%E8%BF%9B%E8%A1%8Cvue%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E5%AD%A6/"/>
     <id>http://rxcccccc.github.io/2025/07/24/%E8%BF%9B%E8%A1%8Cvue%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E5%AD%A6/</id>
     <published>2025-07-24T04:51:39.000Z</published>
-    <updated>2025-07-24T11:06:35.216Z</updated>
+    <updated>2025-07-24T11:16:08.262Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;什么是-Vue？&quot;&gt;&lt;a href=&quot;#什么是-Vue？&quot; class=&quot;headerlink&quot; title=&quot;什么是 Vue？&quot;&gt;&lt;/a&gt;什么是 Vue？&lt;/h1&gt;&lt;p&gt;Vue (发音为 /vjuː/，类似 &lt;strong&gt;view&lt;/strong&gt;)</summary>
+    <summary type="html">&lt;h1 id=&quot;什么是-Vue？&quot;&gt;&lt;a href=&quot;#什么是-Vue？&quot; class=&quot;headerlink&quot; title=&quot;什么是 Vue？&quot;&gt;&lt;/a&gt;什么是 Vue？&lt;/h1&gt;&lt;p&gt;Vue (发音为 &amp;#x2F;vjuː&amp;#x2F;，类似</summary>
         
       
     
@@ -423,27 +444,6 @@
     <summary type="html">&lt;p&gt;[toc]&lt;/p&gt;
 &lt;p&gt;本页面记录了本人在&lt;strong&gt;赛时&lt;/strong&gt;和赛后的思路和相关问题以及对应解法,总结和反思&lt;/p&gt;
 &lt;h1 id=&quot;cf&quot;&gt;&lt;a href=&quot;#cf&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习笔记</title>
-    <link href="http://rxcccccc.github.io/2025/01/24/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://rxcccccc.github.io/2025/01/24/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
-    <published>2025-01-24T05:21:26.000Z</published>
-    <updated>2025-05-13T08:31:52.631Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;机器学习教程&quot;&gt;&lt;a href=&quot;#机器学习教程&quot; class=&quot;headerlink&quot;</summary>
         
       
     
