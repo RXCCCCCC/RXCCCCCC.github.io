@@ -1,0 +1,283 @@
+<!DOCTYPE html><html lang="zn-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>RXCCCCCC | RXCCCCCC</title><meta name="author" content="RXCCCCCC"><meta name="copyright" content="RXCCCCCC"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="[toc] 小知识点dll文件.dll文件是Dynamic Link Library（动态链接库）文件的缩写，它是一种共享库文件，包含了程序所需的代码和数据。与静态链接库不同，动态链接库可以在程序运行时动态加载，使得程序的内存占用更小，同时也方便了程序的更新和维护。 鲁棒性鲁棒性是 robustness 的音译，在中文中常常也被表达为健壮性和强壮性，总体来说其可以用于反映一个系统在面临着内部结构或">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RXCCCCCC">
+<meta property="og:url" content="http://rxcccccc.github.io/2025/07/25/%E8%AE%A1%E7%A7%91%E7%9B%B8%E5%85%B3%E8%87%AA%E6%84%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%A1%A5%E5%85%85/index.html">
+<meta property="og:site_name" content="RXCCCCCC">
+<meta property="og:description" content="[toc] 小知识点dll文件.dll文件是Dynamic Link Library（动态链接库）文件的缩写，它是一种共享库文件，包含了程序所需的代码和数据。与静态链接库不同，动态链接库可以在程序运行时动态加载，使得程序的内存占用更小，同时也方便了程序的更新和维护。 鲁棒性鲁棒性是 robustness 的音译，在中文中常常也被表达为健壮性和强壮性，总体来说其可以用于反映一个系统在面临着内部结构或">
+<meta property="og:locale" content="zn_CN">
+<meta property="og:image" content="http://rxcccccc.github.io/image/avatar.jpg">
+<meta property="article:published_time" content="2025-07-25T10:19:05.574Z">
+<meta property="article:modified_time" content="2025-07-25T10:18:56.820Z">
+<meta property="article:author" content="RXCCCCCC">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://rxcccccc.github.io/image/avatar.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "url": "http://rxcccccc.github.io/2025/07/25/%E8%AE%A1%E7%A7%91%E7%9B%B8%E5%85%B3%E8%87%AA%E6%84%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%A1%A5%E5%85%85/",
+  "image": "http://rxcccccc.github.io/image/avatar.jpg",
+  "datePublished": "2025-07-25T10:19:05.574Z",
+  "dateModified": "2025-07-25T10:18:56.820Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "RXCCCCCC",
+      "url": "http://rxcccccc.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/image/avatar.jpg"><link rel="canonical" href="http://rxcccccc.github.io/2025/07/25/%E8%AE%A1%E7%A7%91%E7%9B%B8%E5%85%B3%E8%87%AA%E6%84%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%A1%A5%E5%85%85/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'RXCCCCCC',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/transpancy.css"><link rel="stylesheet" href="/css/modify.css"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="RXCCCCCC" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(/image/preview.gif);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/image/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 博客の时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友人帐</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/game/word-games"><i class="fa-fw fas fa-font"></i><span> wordle游戏</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent;"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/image/avatar.jpg" alt="Logo"><span class="site-name">RXCCCCCC</span></a><a class="nav-page-title" href="/"><span class="site-name">RXCCCCCC</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 博客の时间线</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友人帐</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/game/word-games"><i class="fa-fw fas fa-font"></i><span> wordle游戏</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Untitled</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-07-25T10:19:05.574Z" title="Created 2025-07-25 18:19:05">2025-07-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-07-25T10:18:56.820Z" title="Updated 2025-07-25 18:18:56">2025-07-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">2.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>8mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>[toc]</p>
+<h1 id="小知识点"><a href="#小知识点" class="headerlink" title="小知识点"></a>小知识点</h1><h2 id="dll文件"><a href="#dll文件" class="headerlink" title="dll文件"></a>dll文件</h2><p>.dll文件是<strong>Dynamic Link Library（<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=229567508&amp;content_type=Article&amp;match_order=1&amp;q=动态链接库&amp;zhida_source=entity">动态链接库</a>）文件的缩写</strong>，它是一种共享库文件，包含了程序所需的代码和数据。与静态链接库不同，动态链接库可以在<strong>程序运行时动态加载</strong>，使得程序的内存占用更小，同时也方便了程序的更新和维护。</p>
+<h2 id="鲁棒性"><a href="#鲁棒性" class="headerlink" title="鲁棒性"></a>鲁棒性</h2><p>鲁棒性是 robustness 的音译，在中文中常常也被表达为健壮性和强壮性，总体来说其可以用于反映<strong>一个系统在面临着内部结构或外部环境的改变时也能够维持其功能稳定运行的能力</strong> 。</p>
+<p>计算机系统：鲁棒性是一个系统或组件在出现不正确的或矛盾的输入时能够正确运行的程度。</p>
+<p>人类语言技术：语言的鲁棒性（识别和分解等）是指人类即使在信息不完全、意思模糊或不断的变化情况下，仍然能够实现沟通的能力。</p>
+<p>实用非线性控制：鲁棒性是一个系统在遇到了设计中所没有考虑过的情况时不受到影响的程度。</p>
+<p>生物系统：鲁棒性是那些具有恢复、自动修复、自控制、自组装、自复制能力的系统所具有的特性。</p>
+<p>面向对象的软件构造：鲁棒性是软件在非正常环境下（也就是在规范外的环境下，包括新的平台、网络超载、内存故障等）做出适当反应的能力。</p>
+<h2 id="句柄（HANDLE）"><a href="#句柄（HANDLE）" class="headerlink" title="句柄（HANDLE）"></a>句柄（HANDLE）</h2><p>句柄是一个<strong>整数</strong>，单独的看它只是数字。</p>
+<p>但这个整数是<strong>进程句柄表数组的下标</strong>，有了这个下标，操作系统就可以找到其索引的数据结构，并能找到数据结构里面的指针，然后根据这个指针获取内核里的某个对象。</p>
+<h1 id="大知识点"><a href="#大知识点" class="headerlink" title="大知识点"></a>大知识点</h1><h2 id="缓冲（buffer）"><a href="#缓冲（buffer）" class="headerlink" title="缓冲（buffer）"></a>缓冲（buffer）</h2><p>缓冲区是<strong>内存空间的一部分</strong>。也就是说，在内存空间中<strong>预留</strong>了一定的存储空间，这些存储空间用来<strong>缓冲输入或输出的数据</strong>，这部分预留的空间就叫做缓冲区。缓冲区根据其对应的是输入设备还是输出设备，分为输入缓冲区和输出缓冲区。</p>
+<h4 id="为什么要引入缓冲区"><a href="#为什么要引入缓冲区" class="headerlink" title="为什么要引入缓冲区"></a>为什么要引入缓冲区</h4><p>比如我们从磁盘里取信息，我们先把读出的数据放在缓冲区，<strong>计算机再直接从缓冲区中取数据</strong>，等缓冲区的数据取完后再去磁盘中读取，这样就可以<strong>减少磁盘的读写次数</strong>，再加上计算机对缓冲区的操作<strong>速度大大快于</strong>对磁盘的操作，故应用缓冲区可大大<strong>提高计算机的运行速度。</strong></p>
+<p>又比如，我们使用打印机打印文档，由于打印机的打印速度相对较慢，我们先把文档输出到打印机相应的缓冲区，打印机再自行逐步打印，这时我们的<strong>CPU可以处理别的事情</strong>。缓冲区就是一块内存区，它<strong>用在输入输出设备和CPU之间</strong>，用来缓存数据。它使得低速的输入输出设备和高速的CPU能够<strong>协调工作</strong>，避免低速的输入输出设备占用CPU，<strong>解放出CPU，使其能够高效率工作</strong>。</p>
+<h2 id="缓存（cache）"><a href="#缓存（cache）" class="headerlink" title="缓存（cache）"></a>缓存（cache）</h2><p>cache是一个非常大的概念。</p>
+<h3 id="一、CPU的Cache"><a href="#一、CPU的Cache" class="headerlink" title="一、CPU的Cache"></a><strong>一、CPU的Cache</strong></h3><p>CPU的Cache，它中文名称是高速缓冲存储器，读写速度很快，几乎与CPU一样。由于CPU的运算速度太快，<strong>内存的数据存取速度无法跟上CPU的速度</strong>，所以在cpu与内存间设置了cache为cpu的数据快取区。当计算机执行程序时，数据与地址管理部件会<strong>预测</strong>可能要用到的数据和指令，并将这些数据和指令<strong>预先从内存中读出送到Cache</strong>。一旦需要时，<strong>先检查Cache</strong>，若有就从Cache中读取，若无再访问内存，现在的CPU还有一级cache，二级cache。简单来说，Cache就是用来<strong>解决CPU与内存之间速度不匹配的问题</strong>，避免内存与辅助内存频繁存取数据，这样就提高了系统的执行效率。</p>
+<h3 id="二、磁盘的Cache"><a href="#二、磁盘的Cache" class="headerlink" title="二、磁盘的Cache"></a><strong>二、磁盘的Cache</strong></h3><p>磁盘也有cache，硬盘的cache作用就类似于CPU的cache，它解决了总线接口的高速需求和读写硬盘的矛盾以及对某些扇区的反复读取。</p>
+<h3 id="三、浏览器的Cache"><a href="#三、浏览器的Cache" class="headerlink" title="三、浏览器的Cache"></a><strong>三、浏览器的Cache</strong></h3><p><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=浏览器缓存&amp;spm=1001.2101.3001.7020">浏览器缓存</a>（Browser Caching）是为了节约网络的资源加速浏览，浏览器在用户磁盘上对最近请求过的文档进行存储，当访问者再次请求这个页面时，浏览器就可以从本地磁盘显示文档，这样就可以加速页面的阅览，并且可以减少服务器的压力。游览器的缓存的数据只是短时间保存，可以人为的清空</p>
+<h4 id="缓存（cache）与缓冲-buffer-的主要区别"><a href="#缓存（cache）与缓冲-buffer-的主要区别" class="headerlink" title="缓存（cache）与缓冲(buffer)的主要区别"></a>缓存（cache）与缓冲(buffer)的主要区别</h4><p>Buffer的核心作用是用来缓冲，缓和冲击（对输出设备的冲击，包括磁盘、打印机、显示器）。比如你每秒要写100次硬盘，对系统冲击很大，<strong>浪费了大量时间</strong>在忙着<strong>处理</strong>开始写和结束写这两件事嘛。用个buffer暂存起来，变成每10秒写一次硬盘，对系统的冲<strong>击就很小</strong>，写入效率高了，日子过得爽了。极大缓和了冲击。</p>
+<p>Cache的核心作用是加快取用的速度（加快读取速度，包括CPU读内存、内存读磁盘、用户通过浏览器请求资源）。比如你一个很复杂的计算做完了，下次还要用结果，就把结果放手边一个<strong>好拿</strong>的地方存着，下次不用再算了。加快了数据取用的速度。</p>
+<p>简单来说就是buffer偏重于写，而cache偏重于读。</p>
+<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p>JSON: JavaScript Object Notation JS对象简谱 , 是一种轻量级的数据交换格式.</p>
+<p>2.JSON对象格式<br>我们通过java，js,xml和json这几种不同的语言来描述一个对象<br>对象是book，它有两个属性，分别是name和info</p>
+<p>java格式</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">class</span> <span class="title class_">Book</span>{ </span><br><span class="line">&gt; 　　　<span class="keyword">private</span> String name; </span><br><span class="line">&gt; 　　　<span class="keyword">private</span> String info;</span><br><span class="line">&gt; 　　　get/set... </span><br><span class="line">&gt; 　　　}</span><br><span class="line">&gt;  　　<span class="type">Book</span> <span class="variable">b</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Book</span>();</span><br><span class="line">&gt;   　　b.setName(“金苹果”); </span><br><span class="line">&gt;   　　b.setInfo(“种苹果”); </span><br><span class="line">&gt;      　　...</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">var</span> b = <span class="keyword">new</span> <span class="title class_">Object</span>(); </span><br><span class="line">&gt; b.<span class="property">name</span> = <span class="string">"金苹果"</span>; </span><br><span class="line">&gt; b.<span class="property">info</span> = <span class="string">"种苹果"</span>;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">book</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">name</span>&gt;</span>金苹果<span class="tag">&lt;/<span class="name">name</span>&gt;</span> </span><br><span class="line">	<span class="tag">&lt;<span class="name">info</span>&gt;</span>种苹果<span class="tag">&lt;/<span class="name">info</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">{</span> </span><br><span class="line">	<span class="attr">"name"</span><span class="punctuation">:</span><span class="string">"金苹果"</span><span class="punctuation">,</span> </span><br><span class="line">	<span class="attr">"info"</span><span class="punctuation">:</span><span class="string">"种苹果"</span> </span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>一个对象, 由一个大括号表示.</strong><br>         括号中 描述对象的属性 .<br>         通过<strong>键值对来描述对象的属性</strong> (可以理解为, 大括号中, 包含的是一个个的键值对.)<br>         格式<br>                  键与值之间使用冒号连接, 多个键值对之间使用<strong>逗号分隔.</strong><br>                  键值对的键 应使用<strong>引号引住</strong> (通常Java解析时, 键不使用引号会报错. 而JS能正确解 析.)                   键值对的值, 可以是JS中的<strong>任意类型</strong>的数据</p>
+<p>数组格式</p>
+<blockquote>
+<p>在JSON格式中可以与对象<strong>互相嵌套</strong><br>[元素1,元素2…]</p>
+</blockquote>
+<p><strong>案例</strong></p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">{</span> </span><br><span class="line">	<span class="attr">"name"</span><span class="punctuation">:</span><span class="string">"小陈"</span><span class="punctuation">,</span> </span><br><span class="line">	<span class="attr">"age"</span><span class="punctuation">:</span><span class="number">20</span><span class="punctuation">,</span> </span><br><span class="line">	<span class="attr">"pengyou"</span><span class="punctuation">:</span><span class="punctuation">[</span><span class="string">"张三"</span><span class="punctuation">,</span><span class="string">"李四"</span><span class="punctuation">,</span><span class="string">"王二"</span><span class="punctuation">,</span><span class="string">"麻子"</span><span class="punctuation">,</span><span class="punctuation">{</span> </span><br><span class="line">									<span class="attr">"name"</span><span class="punctuation">:</span><span class="string">"小明"</span><span class="punctuation">,</span> </span><br><span class="line">									<span class="attr">"info"</span><span class="punctuation">:</span><span class="string">"像彭于晏一样帅气的男人"</span> </span><br><span class="line">									<span class="punctuation">}</span><span class="punctuation">]</span><span class="punctuation">,</span> </span><br><span class="line">	<span class="attr">"heihei"</span><span class="punctuation">:</span><span class="punctuation">{</span> </span><br><span class="line">		<span class="attr">"name"</span><span class="punctuation">:</span><span class="string">"大长刀"</span><span class="punctuation">,</span> </span><br><span class="line">		<span class="attr">"length"</span><span class="punctuation">:</span><span class="string">"40m"</span> </span><br><span class="line">		<span class="punctuation">}</span> </span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+<p>3.JSON数据解析<br>下面开始讲解如何<strong>使用IDEA将Java对象快速转换成JSON数据</strong>，和如何将JSON数据转换成Java对象</p>
+<p>将Java中的对象 快速的<strong>转换为 JSON格式的字符串.</strong><br>将JSON格式的字符串, 转换为Java的对象.</p>
+<p>注意：</p>
+<p>1.以下的导jar包操作如果不会，请去参考一些导jar包操作<br>2.在文章的底部提供了有关的jar包，需要自取<br><strong>GSON解析</strong></p>
+<ul>
+<li><p>将对象转换为JSON字符串</p>
+  <figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">转换JSON字符串的步骤: </span><br><span class="line">	<span class="number">1.</span> 引入JAR包 </span><br><span class="line">	<span class="number">2.</span> 在需要转换JSON字符串的位置编写如下代码即可: </span><br><span class="line">		<span class="type">String</span> <span class="variable">json</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Gson</span>().toJSON(要转换的对象); </span><br><span class="line">	案例:</span><br><span class="line">		<span class="comment">//1. 创建Gson类型的对象</span></span><br><span class="line">        <span class="type">Gson</span> <span class="variable">g</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Gson</span>();</span><br><span class="line">        <span class="comment">//2. 转换</span></span><br><span class="line">        <span class="comment">//优化   可以使用匿名对象</span></span><br><span class="line">        <span class="type">book</span> <span class="variable">b</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">book</span>(<span class="string">"100"</span>,<span class="string">"金苹果"</span>,<span class="string">"种植苹果的故事"</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> g.toJson(b);</span><br><span class="line">        System.out.println(s);</span><br></pre></td></tr></tbody></table></figure>
+<p>  将JSON字符串转换为对象</p>
+  <figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 引入JAR包 </span><br><span class="line"><span class="number">2.</span> 在需要转换Java对象的位置, 编写如下代码:</span><br><span class="line">	<span class="comment">//1. 创建Gson类型的对象</span></span><br><span class="line">        <span class="type">Gson</span> <span class="variable">g</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Gson</span>();</span><br><span class="line">        <span class="comment">//2. 转换 {"id":"100","name":"金苹果","info":"种植苹果的故事","page":["远赴人间惊鸿晏","一度人间盛世颜","致hdd"]}</span></span><br><span class="line">        <span class="comment">//2.1  返回book类型</span></span><br><span class="line">        <span class="type">book</span> <span class="variable">b</span> <span class="operator">=</span> g.fromJson(<span class="string">"{\"id\":\"100\",\"name\":\"金苹果\",\"info\":\"种植苹果的故事\"}"</span>, book.class);</span><br><span class="line">        System.out.println(b.getId());</span><br><span class="line">        <span class="comment">//2.2 返回MAP类型，键值对形式</span></span><br><span class="line">        <span class="type">HashMap</span> <span class="variable">hm</span> <span class="operator">=</span> g.fromJson(<span class="string">"{\"id\":\"100\",\"name\":\"金苹果\",\"info\":\"种植苹果的故事\"}"</span>, HashMap.class);</span><br><span class="line">        System.out.println(hm.get(<span class="string">"id"</span>));</span><br><span class="line">        <span class="comment">//2.3 MAP类型中值是一个数组形式</span></span><br><span class="line">        <span class="type">HashMap</span> <span class="variable">data</span> <span class="operator">=</span> g.fromJson(<span class="string">"{\"id\":\"100\",\"name\":\"金苹果\",\"info\":\"种植苹果的故事\",\"page\":[\"远赴人间惊鸿晏\",\"一度人间盛世颜\",\"致hdd\"]}"</span>, HashMap.class);</span><br><span class="line">        <span class="type">List</span> <span class="variable">list</span> <span class="operator">=</span> (List) data.get(<span class="string">"page"</span>);</span><br><span class="line">        System.out.println(list.get(<span class="number">1</span>));</span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://RXCCCCCC.github.io">RXCCCCCC</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://rxcccccc.github.io/2025/07/25/%E8%AE%A1%E7%A7%91%E7%9B%B8%E5%85%B3%E8%87%AA%E6%84%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%A1%A5%E5%85%85/">http://rxcccccc.github.io/2025/07/25/%E8%AE%A1%E7%A7%91%E7%9B%B8%E5%85%B3%E8%87%AA%E6%84%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%A1%A5%E5%85%85/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/image/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer=""></script></div></div><nav class="pagination-post" id="pagination"></nav><hr class="custom-hr"><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/image/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"></div><div class="author-info-name">RXCCCCCC</div><div class="author-info-description">哦哦哦哦哦哦耶</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/RXCCCCCC"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/RXCCCCCC" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://rxcccccc.github.io/atom.xml" target="_blank" title="Rss"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">孩子搭着玩的一个半成品,总能碰到好多常人碰不到的问题又解决不了,所以就成现在这样了(</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">小知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#dll%E6%96%87%E4%BB%B6"><span class="toc-number">1.1.</span> <span class="toc-text">dll文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%B2%81%E6%A3%92%E6%80%A7"><span class="toc-number">1.2.</span> <span class="toc-text">鲁棒性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%A5%E6%9F%84%EF%BC%88HANDLE%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">句柄（HANDLE）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A7%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text">大知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%93%E5%86%B2%EF%BC%88buffer%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">缓冲（buffer）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%BC%95%E5%85%A5%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="toc-number">2.1.0.1.</span> <span class="toc-text">为什么要引入缓冲区</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%93%E5%AD%98%EF%BC%88cache%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">缓存（cache）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81CPU%E7%9A%84Cache"><span class="toc-number">2.2.1.</span> <span class="toc-text">一、CPU的Cache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%A3%81%E7%9B%98%E7%9A%84Cache"><span class="toc-number">2.2.2.</span> <span class="toc-text">二、磁盘的Cache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84Cache"><span class="toc-number">2.2.3.</span> <span class="toc-text">三、浏览器的Cache</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%93%E5%AD%98%EF%BC%88cache%EF%BC%89%E4%B8%8E%E7%BC%93%E5%86%B2-buffer-%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB"><span class="toc-number">2.2.3.1.</span> <span class="toc-text">缓存（cache）与缓冲(buffer)的主要区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSON"><span class="toc-number">2.3.</span> <span class="toc-text">JSON</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/07/25/%E8%AE%A1%E7%A7%91%E7%9B%B8%E5%85%B3%E8%87%AA%E6%84%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%A1%A5%E5%85%85/" title="Untitled">Untitled</a><time datetime="2025-07-25T10:19:05.574Z" title="Created 2025-07-25 18:19:05">2025-07-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/07/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%8B%B1%E8%AF%AD-bushi/" title="计算机英语(bushi)">计算机英语(bushi)</a><time datetime="2025-07-25T04:37:19.000Z" title="Created 2025-07-25 12:37:19">2025-07-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/07/25/Git%E7%B3%BB%E5%88%97%E4%BB%8E%E5%9F%BA%E7%A1%80%E5%88%B0%E8%BF%9B%E9%98%B6%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%AE%B0/" title="Git系列速查一个一个记">Git系列速查一个一个记</a><time datetime="2025-07-25T03:15:31.000Z" title="Created 2025-07-25 11:15:31">2025-07-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/07/03/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%88c%E8%89%B9%EF%BC%89%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%AE%B0/" title="面向对象（c艹）一个一个记">面向对象（c艹）一个一个记</a><time datetime="2025-07-03T00:35:38.000Z" title="Created 2025-07-03 08:35:38">2025-07-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/04/11/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/" title="进行一个一个算法知识点的复习">进行一个一个算法知识点的复习</a><time datetime="2025-04-11T02:24:47.000Z" title="Created 2025-04-11 10:24:47">2025-04-11</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div id="footer-wrap"><div class="copyright">©2025 By RXCCCCCC</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: 'RM6CxQZamBGOaLbqapwigHVR-MdYXbMMI',
+      appKey: 'W0jx3oFV8keuvguIvlTiy8DQ',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zindex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
