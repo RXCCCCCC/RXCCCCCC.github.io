@@ -214,10 +214,10 @@
 <li><p>检查</p>
 <ul>
 <li>低级错误(变量名,数组清空,初始化赋值,符号,数据类型)</li>
-<li><p>提交前多多测试几个数据,自己捏也好,generate一些也好</p>
-<p>如果怎么找思路上和实现上的错误都找不出来,那么一定是<strong>很细微的铸币低级错误,就再重新确认一遍题目要求(最好是一开始就能确定好,如果做题的根基都错了就烷基八蛋了,但碰上这种情况也再去看一遍(你也不知道你第一遍认为的是不是真的就跟题意切合,再揣摩好)),挑着低级错误细细去看,并且把看过的部分就收起来,不要再重复看了!!!那是无意义的浪费时间(除非自己检查的标准有了新变动,那就应该用新标准再去看一遍)</strong></p>
-</li>
+<li>提交前多多测试几个数据,自己捏也好,generate一些也好</li>
 </ul>
+<p>  如果怎么找思路上和实现上的错误都找不出来,那么一定是<strong>很细微的铸币低级错误,就再重新确认一遍题目要求(最好是一开始就能确定好,如果做题的根基都错了就烷基八蛋了,但碰上这种情况也再去看一遍(你也不知道你第一遍认为的是不是真的就跟题意切合,再揣摩好)),挑着低级错误细细去看,并且把看过的部分就收起来,不要再重复看了!!!那是无意义的浪费时间(除非自己检查的标准有了新变动,那就应该用新标准再去看一遍)</strong>
+  </p>
 </li>
 <li><p>有时间的话,对于<strong>没有把握</strong>的题,不要吝啬去蒙去猜结论,肯定是稳赚不赔的</p>
 <ul>
@@ -242,7 +242,7 @@
 </ul>
 <h1 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h1><ul>
 <li>在main()里面用solve()函数,方便运行至中间就结束</li>
-<li>学会多去<strong>使用空间记录来简化</strong>代码量<strong>(本来也就用不完)</strong></li>
+<li>学会多去<strong>使用空间记录来简化</strong>代码量**(本来也就用不完)**</li>
 <li>对于二维的状态压缩,可以<strong>先用一维的去存储(将二维拆分为一维)</strong>,在<strong>处理时再转化为二维</strong>的</li>
 <li>若有多次求取而<strong>有可能出现重复</strong>,则<strong>使用记忆化数组记下第一次求的值</strong></li>
 <li><strong>根据题目情况</strong>,确定好什么<strong>从0看</strong>什么<strong>从1看</strong>,<strong>最好统一</strong>来看更方便,但一定要<strong>明确好什么变量怎么看,才方便做题</strong></li>
@@ -251,13 +251,13 @@
 <h1 id="铸币小错"><a href="#铸币小错" class="headerlink" title="铸币小错"></a>铸币小错</h1><ul>
 <li><strong>实数!=整数!!!要用lf!!!</strong></li>
 <li>调用stl函数放入是<strong>从0开始</strong>的!</li>
-<li><strong>unorder_</strong>map<strong>不存在pair的hash</strong>,而map用key存储无影响</li>
+<li><strong>unorder_<strong>map</strong>不存在pair的hash</strong>,而map用key存储无影响</li>
 <li>使用stl会略增大空间使用和运行效率,<strong>大数据下且卡得死的话</strong>不如数组模拟效率高</li>
 <li>使用pair,map等<strong>需要排序占用时间</strong>部分需要留意(尤其时间卡的死的时候,把不必要的时间消耗部分去掉)</li>
 </ul>
 <h1 id="基础算法"><a href="#基础算法" class="headerlink" title="基础算法"></a>基础算法</h1><h4 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h4><p>只看<strong>目前何种选择最好</strong>就去选(局部的,对于全局来说不一定选择这个就最好,可能现在差点会对全局更好)</p>
 <p>证明其正确性即证明<strong>局部最优解就是全局最优解</strong>(局部最好<strong>就对全局最好</strong>,一般要<strong>独立的或能共同好</strong>的)</p>
-<h4 id="差分-不同于用树状数组-维护的是变化数组-并非差分"><a href="#差分-不同于用树状数组-维护的是变化数组-并非差分" class="headerlink" title="差分(不同于用树状数组,维护的是变化数组,并非差分)"></a>差分(不同于用树状数组,维护的是变化数组,并非差分)</h4><p>当需要<strong>多次修改区间O(1)但仅少量查询O(n)</strong>时可用</p>
+<h4 id="差分-不同于用树状数组-维护的是变化数组-并非差分"><a href="#差分-不同于用树状数组-维护的是变化数组-并非差分" class="headerlink" title="差分(不同于用树状数组,维护的是变化数组,并非差分)"></a>差分(不同于用树状数组,维护的是变化数组,并非差分)</h4><p>当需要**多次修改区间O(1)但仅少量查询O(n)**时可用</p>
 <h4 id="二维前缀和"><a href="#二维前缀和" class="headerlink" title="二维前缀和"></a>二维前缀和</h4><p>注意维护好边界情况,看好是否要减去或是加上(<strong>写成区块去看</strong>)</p>
 <p>向右下<strong>加和,块+块-重叠+单点</strong></p>
 <p>求取 <strong>块-(块+块-重叠)+(边界)</strong></p>
@@ -270,23 +270,25 @@
 <h4 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a>单调栈</h4><p>每个元素最多出入一次</p>
 <p>元素<strong>入栈前</strong>把<strong>栈顶</strong>会破坏单调性的元素去掉</p>
 <h1 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h1><p><strong>gcd*lcm=a*b</strong></p>
-<h4 id="组合数思想"><a href="#组合数思想" class="headerlink" title="组合数思想"></a>组合数思想</h4><p>互补性质<img src="./进行一个一个算法知识点的复习/189b3a44f8bcf6b0e687730f596d413d.png" alt="189b3a44f8bcf6b0e687730f596d413d"></p>
+<h4 id="组合数思想"><a href="#组合数思想" class="headerlink" title="组合数思想"></a>组合数思想</h4><p>互补性质<img src="/./%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/189b3a44f8bcf6b0e687730f596d413d.png" alt="189b3a44f8bcf6b0e687730f596d413d"></p>
 <p>杨辉三角</p>
-<p><img src="./进行一个一个算法知识点的复习/7e32652740f3f8403d4fea252c15d9ed.png" alt="7e32652740f3f8403d4fea252c15d9ed"></p>
-<p>可用于<strong>线性递推二项式系数(先乘后除)</strong><img src="./进行一个一个算法知识点的复习/69c41febe0e1fd9d41106447ed434f31.png" alt="69c41febe0e1fd9d41106447ed434f31"></p>
+<p><img src="/./%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/7e32652740f3f8403d4fea252c15d9ed.png" alt="7e32652740f3f8403d4fea252c15d9ed"></p>
+<p>可用于<strong>线性递推二项式系数(先乘后除)</strong><img src="/./%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/69c41febe0e1fd9d41106447ed434f31.png" alt="69c41febe0e1fd9d41106447ed434f31"></p>
 <p>直观解释</p>
-<p><img src="./进行一个一个算法知识点的复习/2536917b2042b0806ac454700cb38442.png" alt="2536917b2042b0806ac454700cb38442"></p>
+<p><img src="/./%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/2536917b2042b0806ac454700cb38442.png" alt="2536917b2042b0806ac454700cb38442"></p>
 <p>Cmn的写法</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">lld <span class="title">C</span><span class="params">(lld m,lld n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span>(n==m||m==<span class="number">0</span>) ret <span class="number">1</span>;<span class="comment">//边界情况</span></span><br><span class="line">    <span class="built_in">ret</span> (<span class="built_in">C</span>(m<span class="number">-1</span>,n<span class="number">-1</span>)+<span class="built_in">C</span>(m,n<span class="number">-1</span>));    </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
 <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>求回文串(接近线性)</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ull unsigned long long</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2000010</span>, P = <span class="number">131</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">char</span> s[N];</span><br><span class="line">ull h1[N], h2[N], p[N];</span><br><span class="line"></span><br><span class="line"><span class="function">ull <span class="title">get</span><span class="params">(ull h[], ull l, ull r)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">return</span> h[r] - h[l - <span class="number">1</span>] * p[r - l + <span class="number">1</span>];</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%s"</span>, s + <span class="number">1</span>) &amp;&amp; <span class="built_in">strcmp</span>(s + <span class="number">1</span>, <span class="string">"END"</span>))</span><br><span class="line">    {</span><br><span class="line">        <span class="type">int</span> n = <span class="built_in">strlen</span>(s + <span class="number">1</span>) * <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = n; i; i -= <span class="number">2</span>)</span><br><span class="line">        {</span><br><span class="line">            s[i] = s[i / <span class="number">2</span>];</span><br><span class="line">            s[i - <span class="number">1</span>] = <span class="string">'z'</span> + <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">        s[ ++ n] = <span class="string">'z'</span> + <span class="number">1</span>;</span><br><span class="line">        p[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>, j = n; i &lt;= n; i ++ , j -- )</span><br><span class="line">        {</span><br><span class="line">            h1[i] = h1[i - <span class="number">1</span>] * P + s[i] - <span class="string">'a'</span> + <span class="number">1</span>;</span><br><span class="line">            h2[i] = h2[i - <span class="number">1</span>] * P + s[j] - <span class="string">'a'</span> + <span class="number">1</span>;</span><br><span class="line">            p[i] = p[i - <span class="number">1</span>] * P;</span><br><span class="line">        }</span><br><span class="line">        ull ans = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i ++ )</span><br><span class="line">        {</span><br><span class="line">            ull r = <span class="built_in">min</span>(i - <span class="number">1</span>, n - i);</span><br><span class="line">            <span class="keyword">if</span> (ans &gt;= r || <span class="built_in">get</span>(h1, i - ans, i - <span class="number">1</span>) != <span class="built_in">get</span>(h2, n - (i + ans) + <span class="number">1</span>, n - i)) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">while</span> (ans &lt;= r &amp;&amp; <span class="built_in">get</span>(h1, i - ans, i - <span class="number">1</span>) == <span class="built_in">get</span>(h2, n - (i + ans) + <span class="number">1</span>, n - i)) ans ++ ;</span><br><span class="line">            ans -- ;</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Case %d: %d\n"</span>, ++ cnt, ans);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
 <h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h4 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h4><p>若用于二维就<strong>多套一层循环</strong>即可</p>
 <h1 id="dp"><a href="#dp" class="headerlink" title="dp"></a>dp</h1><p><strong>阶段:从起始阶段转移到目标阶段的若干个子问题序列,每个是解决某个子问题以进行状态转移的解题过程,在一系列的阶段中逐步推进(每个阶段都依赖于前面阶段的结果,需要满足避免重复计算,无后效性)</strong></p>
 <p><strong>状态表示f[i][j]</strong>:<strong>子问题的特征</strong></p>
 <p><strong>决策</strong>:<strong>状态转移方程</strong>,可以<strong>多根据状态转移的限制来思考</strong>出状态转移方程</p>
 <p><strong>状态设置要求</strong></p>
 <p><strong>只有dp的初始状态按要求设置好了,才能够确保是由初始状态递推而来的答案.</strong></p>
-<p>要设置成互无影响的,不重不漏的状态,能划分而<strong>确定好局部与全局的关系(部分好能推得全局好,否则换一种状态表示)</strong>.要确保当使用子问题结果递推时<strong>子问题已经完全解决(或者不完全解决也不影响结果,是互相独立的,可以叠加)</strong>才<strong>可用于递推更新状态</strong></p>
+<p>要设置成互无影响的,不重不漏的状态,能划分而<strong>确定好局部与全局的关系(部分好能推得全局好,否则换一种状态表示)</strong>.要确保当使用子问题结果递推时<strong>子问题已经完全解决(或者不完全解决也不影响结果,是互相独立的,可以叠加)<strong>才</strong>可用于递推更新状态</strong></p>
 <p>此后,别以为可能会互相囊括冲突,其实因为<strong>有维度i,j的限制</strong>,每个值都是<strong>要看作两两独立的(只是讲求取时不会互相有囊括冲突影响)</strong></p>
 <p>满足三个条件：最优子结构，无后效性和子问题重叠。</p>
 <h3 id="最优子结构"><a href="#最优子结构" class="headerlink" title="最优子结构"></a>最优子结构</h3><p>具有最优子结构也可能是<strong>适合用贪心</strong>的方法求解。</p>
@@ -305,8 +307,8 @@
 </ol>
 <p>子问题图中每个定点对应一个子问题，而需要考察的选择对应关联至子问题顶点的边。</p>
 <h3 id="无后效性"><a href="#无后效性" class="headerlink" title="无后效性"></a>无后效性</h3><p>已经求解的子问题，<strong>不会再受到后续决策的影响</strong>。</p>
-<h3 id="子问题重叠"><a href="#子问题重叠" class="headerlink" title="子问题重叠"></a>子问题重叠</h3><p>如果有<strong>大量的重叠子问题</strong>，可以<strong>记忆化避免重复求解(在当前阶段解决该阶段的总体的子问题需要解决若干个子问题的子问题,而部分子问题的子问题在之前的阶段已经求过了)</strong>相同的子问题，从而提升效率(方便<strong>由先前状态得出的最优值</strong>,判断性继承)。</p>
-<h4 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h4><p>如果需要<strong>将边按边权排序</strong>,需要<strong>多次建图（如建一遍原图，建一遍反图）</strong>可以将边直接存下来，需要<strong>重新建图</strong>时<strong>利用直接存下的边</strong>来建图,<strong>就用vector<int> e</int></strong></p>
+<h3 id="子问题重叠"><a href="#子问题重叠" class="headerlink" title="子问题重叠"></a>子问题重叠</h3><p>如果有<strong>大量的重叠子问题</strong>，可以<strong>记忆化避免重复求解(在当前阶段解决该阶段的总体的子问题需要解决若干个子问题的子问题,而部分子问题的子问题在之前的阶段已经求过了)<strong>相同的子问题，从而提升效率(方便</strong>由先前状态得出的最优值</strong>,判断性继承)。</p>
+<h4 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h4><p>如果需要<strong>将边按边权排序</strong>,需要<strong>多次建图（如建一遍原图，建一遍反图）<strong>可以将边直接存下来，需要</strong>重新建图</strong>时<strong>利用直接存下的边</strong>来建图,<strong>就用vector<int> e</int></strong></p>
 <p>邻接矩阵<strong>只适用于没有重边（或重边可以忽略,如求最短路,就只要看最小的那条边就足够）的情况</strong>。(或者<strong>能够特殊处理</strong>)</p>
 <p>其最显著的优点是可以 <strong>O(1) 查询一条边是否存在</strong>。一般只会在<strong>稠密图上</strong>使用</p>
 <p><strong>邻接表vector<int> e[N]</int></strong>,存<strong>各种图</strong>都很适合除非有特殊需求（如需要<strong>快速查询</strong>一条边是否存在，且点数较少，可以使用邻接矩阵）。</p>
