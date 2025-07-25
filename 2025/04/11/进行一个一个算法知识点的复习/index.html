@@ -270,12 +270,12 @@
 <h4 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a>单调栈</h4><p>每个元素最多出入一次</p>
 <p>元素<strong>入栈前</strong>把<strong>栈顶</strong>会破坏单调性的元素去掉</p>
 <h1 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h1><p><strong>gcd*lcm=a*b</strong></p>
-<h4 id="组合数思想"><a href="#组合数思想" class="headerlink" title="组合数思想"></a>组合数思想</h4><p>互补性质<img src="/./%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/189b3a44f8bcf6b0e687730f596d413d.png" alt="189b3a44f8bcf6b0e687730f596d413d"></p>
+<h4 id="组合数思想"><a href="#组合数思想" class="headerlink" title="组合数思想"></a>组合数思想</h4><p>互补性质<img src="/2025/04/11/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/189b3a44f8bcf6b0e687730f596d413d.png" alt="189b3a44f8bcf6b0e687730f596d413d"></p>
 <p>杨辉三角</p>
-<p><img src="/./%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/7e32652740f3f8403d4fea252c15d9ed.png" alt="7e32652740f3f8403d4fea252c15d9ed"></p>
-<p>可用于<strong>线性递推二项式系数(先乘后除)</strong><img src="/./%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/69c41febe0e1fd9d41106447ed434f31.png" alt="69c41febe0e1fd9d41106447ed434f31"></p>
+<p><img src="/2025/04/11/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/7e32652740f3f8403d4fea252c15d9ed.png" alt="7e32652740f3f8403d4fea252c15d9ed"></p>
+<p>可用于<strong>线性递推二项式系数(先乘后除)</strong><img src="/2025/04/11/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/69c41febe0e1fd9d41106447ed434f31.png" alt="69c41febe0e1fd9d41106447ed434f31"></p>
 <p>直观解释</p>
-<p><img src="/./%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/2536917b2042b0806ac454700cb38442.png" alt="2536917b2042b0806ac454700cb38442"></p>
+<p><img src="/2025/04/11/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/2536917b2042b0806ac454700cb38442.png" alt="2536917b2042b0806ac454700cb38442"></p>
 <p>Cmn的写法</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">lld <span class="title">C</span><span class="params">(lld m,lld n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">if</span>(n==m||m==<span class="number">0</span>) ret <span class="number">1</span>;<span class="comment">//边界情况</span></span><br><span class="line">    <span class="built_in">ret</span> (<span class="built_in">C</span>(m<span class="number">-1</span>,n<span class="number">-1</span>)+<span class="built_in">C</span>(m,n<span class="number">-1</span>));    </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
