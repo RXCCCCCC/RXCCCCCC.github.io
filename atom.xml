@@ -6,7 +6,7 @@
   <link href="http://rxcccccc.github.io/atom.xml" rel="self"/>
   
   <link href="http://rxcccccc.github.io/"/>
-  <updated>2025-07-25T10:27:54.844Z</updated>
+  <updated>2025-11-06T08:01:58.178Z</updated>
   <id>http://rxcccccc.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>考完还得记的数学知识(</title>
+    <link href="http://rxcccccc.github.io/2025/11/06/%E8%80%83%E5%AE%8C%E8%BF%98%E5%BE%97%E8%AE%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/"/>
+    <id>http://rxcccccc.github.io/2025/11/06/%E8%80%83%E5%AE%8C%E8%BF%98%E5%BE%97%E8%AE%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/</id>
+    <published>2025-11-06T07:55:45.000Z</published>
+    <updated>2025-11-06T08:01:58.178Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;高数&quot;&gt;&lt;a href=&quot;#高数&quot; class=&quot;headerlink&quot; title=&quot;高数&quot;&gt;&lt;/a&gt;高数&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>计科相关自感知识点的一个一个补充</title>
     <link href="http://rxcccccc.github.io/2025/07/25/%E8%AE%A1%E7%A7%91%E7%9B%B8%E5%85%B3%E8%87%AA%E6%84%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%A1%A5%E5%85%85/"/>
     <id>http://rxcccccc.github.io/2025/07/25/%E8%AE%A1%E7%A7%91%E7%9B%B8%E5%85%B3%E8%87%AA%E6%84%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%A1%A5%E5%85%85/</id>
     <published>2025-07-25T04:37:19.000Z</published>
-    <updated>2025-07-25T10:27:54.844Z</updated>
+    <updated>2025-11-03T12:44:37.846Z</updated>
     
     
       
@@ -29,50 +50,7 @@
         
         
     <summary type="html">&lt;p&gt;[toc]&lt;/p&gt;
-&lt;h1 id=&quot;小知识点&quot;&gt;&lt;a href=&quot;#小知识点&quot; class=&quot;headerlink&quot; title=&quot;小知识点&quot;&gt;&lt;/a&gt;小知识点&lt;/h1&gt;&lt;h2 id=&quot;dll文件&quot;&gt;&lt;a href=&quot;#dll文件&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>计算机英语(bushi)</title>
-    <link href="http://rxcccccc.github.io/2025/07/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%8B%B1%E8%AF%AD-bushi/"/>
-    <id>http://rxcccccc.github.io/2025/07/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%8B%B1%E8%AF%AD-bushi/</id>
-    <published>2025-07-25T04:37:19.000Z</published>
-    <updated>2025-07-25T04:41:36.310Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;[TOC]&lt;br&gt;英语蒟蒻记录一点冲浪时碰到的陌生英语词&lt;/p&gt;
-&lt;h1 id=&quot;单词&quot;&gt;&lt;a href=&quot;#单词&quot; class=&quot;headerlink&quot; title=&quot;单词&quot;&gt;&lt;/a&gt;单词&lt;/h1&gt;&lt;h2 id=&quot;A&quot;&gt;&lt;a href=&quot;#A&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Git系列速查一个一个记</title>
-    <link href="http://rxcccccc.github.io/2025/07/25/Git%E7%B3%BB%E5%88%97%E4%BB%8E%E5%9F%BA%E7%A1%80%E5%88%B0%E8%BF%9B%E9%98%B6%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%AE%B0/"/>
-    <id>http://rxcccccc.github.io/2025/07/25/Git%E7%B3%BB%E5%88%97%E4%BB%8E%E5%9F%BA%E7%A1%80%E5%88%B0%E8%BF%9B%E9%98%B6%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%AE%B0/</id>
-    <published>2025-07-25T03:15:31.000Z</published>
-    <updated>2025-07-25T03:31:03.098Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Git</summary>
+&lt;h1 id=&quot;小知识点&quot;&gt;&lt;a href=&quot;#小知识点&quot; class=&quot;headerlink&quot; title=&quot;小知识点&quot;&gt;&lt;/a&gt;小知识点&lt;/h1&gt;&lt;h2 id=&quot;绘图工具&quot;&gt;&lt;a href=&quot;#绘图工具&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -94,29 +72,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;面向过程程序设计OPP-Oriented-Procedural-Programming&quot;&gt;&lt;a href=&quot;#面向过程程序设计OPP-Oriented-Procedural-Programming&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>进行一个一个算法知识点的复习</title>
-    <link href="http://rxcccccc.github.io/2025/04/11/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/"/>
-    <id>http://rxcccccc.github.io/2025/04/11/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E5%A4%8D%E4%B9%A0/</id>
-    <published>2025-04-11T02:24:47.000Z</published>
-    <updated>2025-07-11T14:51:55.472Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本篇为方便博主笨比时及时进行算法知识点的一个一个快速回顾&lt;/p&gt;
-&lt;h1 id=&quot;赛前提醒&quot;&gt;&lt;a href=&quot;#赛前提醒&quot; class=&quot;headerlink&quot; title=&quot;赛前提醒&quot;&gt;&lt;/a&gt;赛前提醒&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;能用long</summary>
         
       
     
@@ -237,64 +192,18 @@
   </entry>
   
   <entry>
-    <title>算法学习有感</title>
-    <link href="http://rxcccccc.github.io/2025/03/13/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E6%9C%89%E6%84%9F/"/>
-    <id>http://rxcccccc.github.io/2025/03/13/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E6%9C%89%E6%84%9F/</id>
-    <published>2025-03-13T10:07:24.000Z</published>
-    <updated>2025-04-20T02:59:27.887Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;一定要有能自主配好&lt;strong&gt;成熟&lt;/strong&gt;环境的能力,总会遇到&lt;strong&gt;到新环境要调整&lt;/strong&gt;的时候&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;多多去通过问问题(学长,ai)等去学习理解问题而非总是自己死磕(自个儿而看都卡了,还光重复多看怎么可能高效学习的</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>进行一个一个比赛的补</title>
-    <link href="http://rxcccccc.github.io/2025/02/16/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E6%AF%94%E8%B5%9B%E7%9A%84%E8%A1%A5/"/>
-    <id>http://rxcccccc.github.io/2025/02/16/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E6%AF%94%E8%B5%9B%E7%9A%84%E8%A1%A5/</id>
-    <published>2025-02-16T06:31:19.000Z</published>
-    <updated>2025-04-05T15:51:06.627Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;[toc]&lt;/p&gt;
-&lt;p&gt;本页面记录了本人在&lt;strong&gt;赛时&lt;/strong&gt;和赛后的思路和相关问题以及对应解法,总结和反思&lt;/p&gt;
-&lt;h1 id=&quot;cf&quot;&gt;&lt;a href=&quot;#cf&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>进行一个一个前端的雪</title>
-    <link href="http://rxcccccc.github.io/2025/01/23/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E7%9A%84%E9%9B%AA/"/>
-    <id>http://rxcccccc.github.io/2025/01/23/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E7%9A%84%E9%9B%AA/</id>
+    <link href="http://rxcccccc.github.io/2025/01/23/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%80%9F%E5%BA%A6%E7%9A%84%E9%9B%AA/"/>
+    <id>http://rxcccccc.github.io/2025/01/23/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%80%9F%E5%BA%A6%E7%9A%84%E9%9B%AA/</id>
     <published>2025-01-23T10:32:48.000Z</published>
-    <updated>2025-07-25T08:37:16.310Z</updated>
+    <updated>2025-07-31T07:11:54.340Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;[toc]&lt;/p&gt;
-&lt;h2 id=&quot;Web-开发概况&quot;&gt;&lt;a href=&quot;#Web-开发概况&quot; class=&quot;headerlink&quot; title=&quot;Web 开发概况&quot;&gt;&lt;/a&gt;Web 开发概况&lt;/h2&gt;&lt;p&gt;Web</summary>
+    <summary type="html">&lt;h2 id=&quot;Web-开发概况&quot;&gt;&lt;a href=&quot;#Web-开发概况&quot; class=&quot;headerlink&quot; title=&quot;Web 开发概况&quot;&gt;&lt;/a&gt;Web 开发概况&lt;/h2&gt;&lt;p&gt;Web</summary>
         
       
     
@@ -308,7 +217,7 @@
     <link href="http://rxcccccc.github.io/2025/01/18/hexo%E4%BD%BF%E7%94%A8/"/>
     <id>http://rxcccccc.github.io/2025/01/18/hexo%E4%BD%BF%E7%94%A8/</id>
     <published>2025-01-18T05:26:47.000Z</published>
-    <updated>2025-07-25T03:04:21.373Z</updated>
+    <updated>2025-11-06T07:54:10.002Z</updated>
     
     
       
@@ -316,8 +225,8 @@
         
         
     <summary type="html">&lt;p&gt;[toc]&lt;/p&gt;
-&lt;h2 id=&quot;hexo博客最常用的套路&quot;&gt;&lt;a href=&quot;#hexo博客最常用的套路&quot; class=&quot;headerlink&quot; title=&quot;hexo博客最常用的套路&quot;&gt;&lt;/a&gt;hexo博客最常用的套路&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;hexo</summary>
+&lt;p&gt;切路径&lt;/p&gt;
+&lt;figure class=&quot;highlight powershell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
         
       
     
