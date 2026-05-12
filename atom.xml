@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>RXCCCCCC</title>
-  <icon>http://rxcccccc.github.io/icon.png</icon>
+  <icon>https://rxcccccc.github.io/icon.png</icon>
   <subtitle>1?5!</subtitle>
-  <link href="http://rxcccccc.github.io/atom.xml" rel="self"/>
+  <link href="https://rxcccccc.github.io/atom.xml" rel="self"/>
   
-  <link href="http://rxcccccc.github.io/"/>
-  <updated>2025-11-06T08:35:18.205Z</updated>
-  <id>http://rxcccccc.github.io/</id>
+  <link href="https://rxcccccc.github.io/"/>
+  <updated>2026-04-26T09:49:51.085Z</updated>
+  <id>https://rxcccccc.github.io/</id>
   
   <author>
     <name>RXCCCCCC</name>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>艾宾浩斯遗忘曲线进行一个一个了解</title>
+    <link href="https://rxcccccc.github.io/2026/04/26/%E8%89%BE%E5%AE%BE%E6%B5%A9%E6%96%AF%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E4%BA%86%E8%A7%A3/"/>
+    <id>https://rxcccccc.github.io/2026/04/26/%E8%89%BE%E5%AE%BE%E6%B5%A9%E6%96%AF%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E4%BA%86%E8%A7%A3/</id>
+    <published>2026-04-26T09:15:12.000Z</published>
+    <updated>2026-04-26T09:49:51.085Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;感悟&quot;&gt;&lt;a href=&quot;#感悟&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>考完还得记的数学知识(</title>
-    <link href="http://rxcccccc.github.io/2025/11/06/%E8%80%83%E5%AE%8C%E8%BF%98%E5%BE%97%E8%AE%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/"/>
-    <id>http://rxcccccc.github.io/2025/11/06/%E8%80%83%E5%AE%8C%E8%BF%98%E5%BE%97%E8%AE%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/</id>
+    <link href="https://rxcccccc.github.io/2025/11/06/%E8%80%83%E5%AE%8C%E8%BF%98%E5%BE%97%E8%AE%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/"/>
+    <id>https://rxcccccc.github.io/2025/11/06/%E8%80%83%E5%AE%8C%E8%BF%98%E5%BE%97%E8%AE%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/</id>
     <published>2025-11-06T07:55:45.000Z</published>
-    <updated>2025-11-06T08:35:18.205Z</updated>
+    <updated>2026-03-11T09:03:31.406Z</updated>
     
     
       
@@ -39,61 +60,17 @@
   
   <entry>
     <title>计科相关自感知识点的一个一个补充</title>
-    <link href="http://rxcccccc.github.io/2025/07/25/%E8%AE%A1%E7%A7%91%E7%9B%B8%E5%85%B3%E8%87%AA%E6%84%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%A1%A5%E5%85%85/"/>
-    <id>http://rxcccccc.github.io/2025/07/25/%E8%AE%A1%E7%A7%91%E7%9B%B8%E5%85%B3%E8%87%AA%E6%84%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%A1%A5%E5%85%85/</id>
+    <link href="https://rxcccccc.github.io/2025/07/25/%E8%AE%A1%E7%A7%91%E7%9B%B8%E5%85%B3%E8%87%AA%E6%84%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%A1%A5%E5%85%85/"/>
+    <id>https://rxcccccc.github.io/2025/07/25/%E8%AE%A1%E7%A7%91%E7%9B%B8%E5%85%B3%E8%87%AA%E6%84%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%A1%A5%E5%85%85/</id>
     <published>2025-07-25T04:37:19.000Z</published>
-    <updated>2025-11-03T12:44:37.846Z</updated>
+    <updated>2026-03-25T03:37:22.653Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;[toc]&lt;/p&gt;
-&lt;h1 id=&quot;小知识点&quot;&gt;&lt;a href=&quot;#小知识点&quot; class=&quot;headerlink&quot; title=&quot;小知识点&quot;&gt;&lt;/a&gt;小知识点&lt;/h1&gt;&lt;h2 id=&quot;绘图工具&quot;&gt;&lt;a href=&quot;#绘图工具&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>面向对象（c艹）一个一个记</title>
-    <link href="http://rxcccccc.github.io/2025/07/03/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%88c%E8%89%B9%EF%BC%89%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%AE%B0/"/>
-    <id>http://rxcccccc.github.io/2025/07/03/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%88c%E8%89%B9%EF%BC%89%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%AE%B0/</id>
-    <published>2025-07-03T00:35:38.000Z</published>
-    <updated>2025-07-25T10:17:24.741Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;面向过程程序设计OPP-Oriented-Procedural-Programming&quot;&gt;&lt;a href=&quot;#面向过程程序设计OPP-Oriented-Procedural-Programming&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>比赛相关内容的一个一个记</title>
-    <link href="http://rxcccccc.github.io/2025/04/10/%E6%AF%94%E8%B5%9B%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%AE%B0/"/>
-    <id>http://rxcccccc.github.io/2025/04/10/%E6%AF%94%E8%B5%9B%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E7%9A%84%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E8%AE%B0/</id>
-    <published>2025-04-10T13:00:33.000Z</published>
-    <updated>2025-05-29T12:46:43.688Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本篇对各个比赛的一个一个印象记录&lt;/p&gt;
-&lt;h1 id=&quot;蓝桥杯&quot;&gt;&lt;a href=&quot;#蓝桥杯&quot; class=&quot;headerlink&quot; title=&quot;蓝桥杯&quot;&gt;&lt;/a&gt;蓝桥杯&lt;/h1&gt;&lt;h4 id=&quot;题型&quot;&gt;&lt;a href=&quot;#题型&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;小知识点&quot;&gt;&lt;a href=&quot;#小知识点&quot; class=&quot;headerlink&quot; title=&quot;小知识点&quot;&gt;&lt;/a&gt;小知识点&lt;/h1&gt;&lt;h2 id=&quot;分布式是什么意思&quot;&gt;&lt;a href=&quot;#分布式是什么意思&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -104,10 +81,10 @@
   
   <entry>
     <title>搭建环境做一个一个备忘</title>
-    <link href="http://rxcccccc.github.io/2025/04/05/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>http://rxcccccc.github.io/2025/04/05/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <link href="https://rxcccccc.github.io/2025/04/05/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>https://rxcccccc.github.io/2025/04/05/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
     <published>2025-04-05T04:01:34.000Z</published>
-    <updated>2025-04-16T14:53:07.075Z</updated>
+    <updated>2025-12-03T06:34:21.244Z</updated>
     
     
       
@@ -126,32 +103,9 @@
   </entry>
   
   <entry>
-    <title>顽强拼搏记录</title>
-    <link href="http://rxcccccc.github.io/2025/03/23/%E9%A1%BD%E5%BC%BA%E6%8B%BC%E6%90%8F%E8%AE%B0%E5%BD%95/"/>
-    <id>http://rxcccccc.github.io/2025/03/23/%E9%A1%BD%E5%BC%BA%E6%8B%BC%E6%90%8F%E8%AE%B0%E5%BD%95/</id>
-    <published>2025-03-23T08:12:10.000Z</published>
-    <updated>2025-04-14T07:58:32.426Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本篇记录博主自己顽强拼搏的时刻以供回念,以激励博主继续又菜又爱玩.&lt;strong&gt;(没有含金量,全是刺激性)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;2025.3.23&lt;/p&gt;
-&lt;h1 id=&quot;大工之星第二场&quot;&gt;&lt;a href=&quot;#大工之星第二场&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>唐b杂事</title>
-    <link href="http://rxcccccc.github.io/2025/03/17/%E5%94%90b%E6%9D%82%E4%BA%8B/"/>
-    <id>http://rxcccccc.github.io/2025/03/17/%E5%94%90b%E6%9D%82%E4%BA%8B/</id>
+    <link href="https://rxcccccc.github.io/2025/03/17/%E5%94%90b%E6%9D%82%E4%BA%8B/"/>
+    <id>https://rxcccccc.github.io/2025/03/17/%E5%94%90b%E6%9D%82%E4%BA%8B/</id>
     <published>2025-03-17T10:04:06.000Z</published>
     <updated>2025-03-23T13:14:26.272Z</updated>
     
@@ -171,51 +125,9 @@
   </entry>
   
   <entry>
-    <title>麦麦--qq聊天机器人部署备忘</title>
-    <link href="http://rxcccccc.github.io/2025/03/17/%E9%BA%A6%E9%BA%A6-qq%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA%E9%83%A8%E7%BD%B2%E5%A4%87%E5%BF%98/"/>
-    <id>http://rxcccccc.github.io/2025/03/17/%E9%BA%A6%E9%BA%A6-qq%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA%E9%83%A8%E7%BD%B2%E5%A4%87%E5%BF%98/</id>
-    <published>2025-03-17T05:10:59.000Z</published>
-    <updated>2025-04-15T06:29:23.161Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;重启电脑后如何启动&quot;&gt;&lt;a href=&quot;#重启电脑后如何启动&quot; class=&quot;headerlink&quot; title=&quot;重启电脑后如何启动&quot;&gt;&lt;/a&gt;重启电脑后如何启动&lt;/h1&gt;&lt;h2 id=&quot;启动QQ&quot;&gt;&lt;a href=&quot;#启动QQ&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>进行一个一个前端的雪</title>
-    <link href="http://rxcccccc.github.io/2025/01/23/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%80%9F%E5%BA%A6%E7%9A%84%E9%9B%AA/"/>
-    <id>http://rxcccccc.github.io/2025/01/23/%E8%BF%9B%E8%A1%8C%E4%B8%80%E4%B8%AA%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E9%80%9F%E5%BA%A6%E7%9A%84%E9%9B%AA/</id>
-    <published>2025-01-23T10:32:48.000Z</published>
-    <updated>2025-07-31T07:11:54.340Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Web-开发概况&quot;&gt;&lt;a href=&quot;#Web-开发概况&quot; class=&quot;headerlink&quot; title=&quot;Web 开发概况&quot;&gt;&lt;/a&gt;Web 开发概况&lt;/h2&gt;&lt;p&gt;Web</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>博客搭建备忘</title>
-    <link href="http://rxcccccc.github.io/2025/01/18/hexo%E4%BD%BF%E7%94%A8/"/>
-    <id>http://rxcccccc.github.io/2025/01/18/hexo%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://rxcccccc.github.io/2025/01/18/hexo%E4%BD%BF%E7%94%A8/"/>
+    <id>https://rxcccccc.github.io/2025/01/18/hexo%E4%BD%BF%E7%94%A8/</id>
     <published>2025-01-18T05:26:47.000Z</published>
     <updated>2025-11-06T07:54:10.002Z</updated>
     
